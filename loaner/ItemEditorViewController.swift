@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ItemEditorViewController: UIViewController {
 
@@ -121,8 +122,10 @@ class ItemEditorViewController: UIViewController {
             return
         }
         
+
         performSegue(withIdentifier: "show contact info", sender: nil)
     }
+
     
     @IBAction func unwindToItemEditor(_ segue: UIStoryboardSegue) {
         guard let identifier = segue.identifier else { return }
